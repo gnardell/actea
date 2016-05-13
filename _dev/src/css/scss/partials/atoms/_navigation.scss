@@ -15,8 +15,7 @@ a {
   }
   &:hover,
   &:focus {
-    color: $link-hover-color;
-    outline-color: $link-hover-color;
+    @include link-focus-bg;
     border-bottom-color: currentColor;
   }
   &:hover {

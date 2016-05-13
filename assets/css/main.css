@@ -1023,8 +1023,9 @@ a:visited {
 
 a:hover,
 a:focus {
-	color: #097380;
-	outline-color: #097380;
+	color: #ffffff;
+	background-color: #097380;
+	outline: 0;
 	border-bottom-color: currentColor;
 }
 
@@ -1767,7 +1768,7 @@ img {
 	fill: #fff;
 }
 
-.main-navigation ul.main-nav {
+ul.main-nav {
 	list-style: none;
 	padding: 80px 0 0 0;
 	margin: 0;
@@ -1781,21 +1782,21 @@ img {
 	transition: all 0.3s ease-out;
 }
 
-.main-navigation ul.main-nav.is-toggled-on {
+ul.main-nav.is-toggled-on {
 	left: 0;
 }
 
-.main-navigation ul.main-nav li {
+ul.main-nav li {
 	padding: 0.4em;
 	text-align: center;
 	visibility: hidden;
 }
 
-.main-navigation ul.main-nav li.is-visible {
+ul.main-nav li.is-visible {
 	visibility: visible;
 }
 
-.main-navigation ul.main-nav li a {
+ul.main-nav li a {
 	font-family: "PT Sans", Helvetica, Arial, sans-serif;
 	color: #FFFFFF;
 	font-size: 1.4em;
@@ -1853,6 +1854,13 @@ a.post-read-more {
 	font-family: "PT Sans", Helvetica, Arial, sans-serif;
 	font-size: 0.9em;
 	font-weight: bold;
+}
+
+a.post-read-more:focus,
+a.post-read-more:hover {
+	color: #ffffff;
+	background-color: #097380;
+	outline: 0;
 }
 
 /*
@@ -2012,7 +2020,7 @@ table tbody td[data-title]:before {
 	visibility: hidden;
 }
 
-.main-navigation ul.main-nav {
+ul.main-nav {
 	text-align: center;
 	padding-top: 40px;
 	position: static;
@@ -2023,14 +2031,21 @@ table tbody td[data-title]:before {
 	background-color: transparent;
 }
 
-.main-navigation ul.main-nav li {
+ul.main-nav li {
 	visibility: visible;
 	display: inline-block;
 }
 
-.main-navigation ul.main-nav li a {
+ul.main-nav li a {
 	color: #000000;
 	font-weight: 400;
+}
+
+ul.main-nav li a:hover,
+ul.main-nav li a:focus {
+	color: #ffffff;
+	background-color: #097380;
+	outline: 0;
 }
 
 }
