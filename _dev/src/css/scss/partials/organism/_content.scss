@@ -112,6 +112,12 @@ ul.main-nav {
       a {
         color: #000000;
         font-weight: 400;
+        &.active {
+          color: #ffffff;
+          background-color: transparentize($base-theme-color, 0.2);
+          outline: 0;
+
+        }
         &:hover,
         &:focus {
           @include link-focus-bg;

@@ -9,19 +9,12 @@
 
   </button>
   <ul class="main-nav" id="main-nav" aria-hidden="true" aria-labelledby="menu-button">
-<!--    {% for my_page in site.pages %} {% if my_page.title %}
+    {% for nav_item in site.data.navigation %}
     <li>
-      <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a> {% endif %} {% endfor %}
-    </li>-->
+      <a href="{{ nav_item.link }}" {% if page.url == nav_item.link %} class="active" {% endif %}>{{ nav_item.name }}</a>
+    </li>
+    {% endfor %}
 
-    {% for nav_item in site.data.navigation %} {% if page.url == nav_item.link %}
-    <li class="active">
-      {% else %}
-      <li>
-        {% endif %}
-        <a href="{{ nav_item.link }}">{{ nav_item.name }}</a>
-      </li>
-      {% endfor %}
   </ul>
 
 </nav>
