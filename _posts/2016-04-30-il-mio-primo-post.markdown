@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    "Il mio primo post"
+title:    "Il mio primo post con Jekylll"
 date:     2016-04-30 11:10:10 +0200
 categories: general
 ---
