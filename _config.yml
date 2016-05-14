@@ -13,7 +13,11 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
+<<<<<<< HEAD
 url: "http://localhost:4000" # the base hostname & protocol for your site
+=======
+url: "http://gnardell.github.io/actea" # the base hostname & protocol for your site
+>>>>>>> 5ce73914da9fe5a25a9f1722192b0db11035d2fb
 logo: #site-logo
 
 gems:
