@@ -2,9 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 /node_modules/
-<<<<<<< 30d7bbb2d32bda4ad5c012a4a210839beca0517f
 .DS_Store
 
-=======
-/check.html
->>>>>>> Updated
