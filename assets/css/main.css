@@ -1778,8 +1778,8 @@ ul.main-nav {
 	bottom: 0;
 	left: 100%;
 	background-color: rgba(9, 115, 128, 0.9);
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: left 0.3s ease-out;
+	transition: left 0.3s ease-out;
 }
 
 ul.main-nav.is-toggled-on {
