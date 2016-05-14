@@ -1014,6 +1014,11 @@ fieldset {
 *  6.1 Links
 */
 
+a {
+	-webkit-transition: outline-offset 0.2s ease;
+	transition: outline-offset 0.2s ease;
+}
+
 a:link,
 a:visited {
 	text-decoration: none;
@@ -1023,9 +1028,8 @@ a:visited {
 
 a:hover,
 a:focus {
-	color: #ffffff;
-	background-color: #097380;
-	outline: 0;
+	outline-color: #097380;
+	outline-offset: -2px;
 	border-bottom-color: currentColor;
 }
 
@@ -1858,9 +1862,8 @@ a.post-read-more {
 
 a.post-read-more:focus,
 a.post-read-more:hover {
-	color: #ffffff;
-	background-color: #097380;
-	outline: 0;
+	outline-color: #097380;
+	outline-offset: -2px;
 }
 
 /*
@@ -2043,15 +2046,13 @@ ul.main-nav li a {
 
 ul.main-nav li a.active {
 	color: #ffffff;
-	background-color: rgba(9, 115, 128, 0.8);
-	outline: 0;
+	background-color: #097380;
 }
 
 ul.main-nav li a:hover,
 ul.main-nav li a:focus {
-	color: #ffffff;
-	background-color: #097380;
-	outline: 0;
+	outline-color: #097380;
+	outline-offset: -2px;
 }
 
 }
