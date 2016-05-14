@@ -1446,40 +1446,6 @@ img {
 	-ms-interpolation-mode: bicubic;
 }
 
-.wp-caption {
-	background: #b7b7b7;
-	max-width: 100%;
-	padding: 2rem;
-	text-align: center;
-}
-
-.wp-caption.alignnone {
-	margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-	margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-	margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-	border: 0 none;
-	height: auto;
-	margin: 0;
-	max-width: 100%;
-	padding: 0;
-	width: auto;
-}
-
-.wp-caption .wp-caption-text,
-.gallery-caption {
-	margin: 0;
-	padding: 0.5rem;
-}
-
 /*===========================================
 * Tipgraphy Molecules
 ============================================*/
@@ -2013,6 +1979,14 @@ table tbody td {
 
 table tbody td[data-title]:before {
 	content: none;
+}
+
+img.half {
+	width: 50%;
+}
+
+img.third {
+	width: 33.33333333%;
 }
 
 .site-branding .site-title {

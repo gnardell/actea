@@ -5,41 +5,13 @@ img {
   max-width: 100%;
   height: auto;
   -ms-interpolation-mode: bicubic;
+  @include media($medium){
+  &.half {
+    width: 50%;
+  }
+  &.third {
+    width: 33.33333333%;
+    }
+  }
 }
-
-.wp-caption {
-  background: darken($body-bg-darken,10%);
-  max-width: 100%;
-  padding: 2rem;
-  text-align: center;
-}
-
-.wp-caption.alignnone {
-  margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-  margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-  margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-  border: 0 none;
-  height: auto;
-  margin: 0;
-  max-width: 100%;
-  padding: 0;
-  width: auto;
-}
-
-.wp-caption .wp-caption-text,
-.gallery-caption {
-  margin: 0;
-  padding: 0.5rem;
-}
-
-
 
