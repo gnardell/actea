@@ -1815,7 +1815,11 @@ ul.main-nav li a {
 	margin-right: 0;
 }
 
-.post-categories li::before {
+.post-categories li a {
+	color: #097380;
+}
+
+.post-categories li a::before {
 	content: "#";
 }
 

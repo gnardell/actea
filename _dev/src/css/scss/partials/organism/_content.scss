@@ -164,8 +164,11 @@ ul.main-nav {
     &:last-child {
       margin-right: 0;
     }
-    &::before {
-      content: "#";
+    a {
+      color: $base-theme-color;
+      &::before {
+        content: "#";
+      }
     }
   }
 }
