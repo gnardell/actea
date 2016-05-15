@@ -1026,7 +1026,7 @@ a:visited {
 	border-bottom: 1px solid currentColor;
 }
 
-a:hover,
+a:active,
 a:focus {
 	outline-color: #097380;
 	outline-offset: -2px;
@@ -1856,6 +1856,11 @@ a.post-read-more:hover {
 .site-footer a:link,
 .site-footer a:visited {
 	color: #ffffff;
+}
+
+.site-footer a:active,
+.site-footer a:focus {
+	outline-color: #ffffff;
 }
 
 .footer-avatar {

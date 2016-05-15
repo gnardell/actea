@@ -14,7 +14,7 @@ a {
     color: $text-color;
     border-bottom: 1px solid currentColor;
   }
-  &:hover,
+  &:active,
   &:focus {
     @include link-focus;
     border-bottom-color: currentColor;
