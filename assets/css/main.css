@@ -1026,7 +1026,7 @@ a:visited {
 	border-bottom: 1px solid currentColor;
 }
 
-a:hover,
+a:active,
 a:focus {
 	outline-color: #097380;
 	outline-offset: -2px;
@@ -1815,7 +1815,11 @@ ul.main-nav li a {
 	margin-right: 0;
 }
 
-.post-categories li::before {
+.post-categories li a {
+	color: #097380;
+}
+
+.post-categories li a::before {
 	content: "#";
 }
 
@@ -1856,6 +1860,11 @@ a.post-read-more:hover {
 .site-footer a:link,
 .site-footer a:visited {
 	color: #ffffff;
+}
+
+.site-footer a:active,
+.site-footer a:focus {
+	outline-color: #ffffff;
 }
 
 .footer-avatar {
