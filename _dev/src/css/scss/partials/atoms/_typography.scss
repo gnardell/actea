@@ -95,3 +95,7 @@ mark {
   background-color: desaturate(lighten($base-theme-color, 40%), 40%);
   color: $text-color;
 }
+
+abbr[title] {
+  border-bottom: none;
+}

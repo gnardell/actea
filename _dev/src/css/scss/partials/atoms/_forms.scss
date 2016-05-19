@@ -1,8 +1,15 @@
 /* Elements */
 
+form {
+  ul{
+    list-style: none;
+    padding-left: 1em;
+  }
+}
+
 label {
   //display: block;
-  font-size: 1.6rem;
+  font-size: 1.3em;
   margin-bottom: .2em;
   text-transform: uppercase;
 }
@@ -10,7 +17,6 @@ label {
 select, textarea {
   padding: .8em 1.0em;
   width: 100%;
-  font-size: 1em;
   color: #333;
   border: 1px solid $border-color;
   border-radius: 2px;
@@ -28,10 +34,9 @@ textarea {
 }
 
 input {
-  &:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]) {
+  &:not([type=submit]):not([type=button]):not([type=reset]):not([type=file]):not([type=radio]):not([type=checkbox]) {
     padding: .8em 1.0em;
     width: 100%;
-    font-size: 1em;
     color: #333;
     border: 1px solid $border-color;
     border-radius: 2px;
@@ -49,6 +54,9 @@ fieldset {
   margin-bottom: 1.5em;
   border: 1px solid $border-color;
   border-radius: 2px;
+}
+input[type=checkbox], input[type=radio]{
+  margin-right: 0.3em;
 }
 
 /*//Select boxes

@@ -621,6 +621,10 @@ mark {
 	color: #232221;
 }
 
+abbr[title] {
+	border-bottom: none;
+}
+
 /* -------------------------------------------------------
 *  4.0 Elements
 *  ------------------------------------------------------*/
@@ -877,10 +881,20 @@ a.button:focus {
 	text-shadow: none;
 }
 
+a.button:link,
+a.button:visited {
+	border-bottom: 2px solid currentColor;
+}
+
 /* Elements */
 
+form ul {
+	list-style: none;
+	padding-left: 1em;
+}
+
 label {
-	font-size: 1.6rem;
+	font-size: 1.3em;
 	margin-bottom: .2em;
 	text-transform: uppercase;
 }
@@ -889,7 +903,6 @@ select,
 textarea {
 	padding: .8em 1.0em;
 	width: 100%;
-	font-size: 1em;
 	color: #333;
 	border: 1px solid #ddd;
 	border-radius: 2px;
@@ -904,10 +917,9 @@ textarea {
 	min-height: 9em;
 }
 
-input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]) {
+input:not([type=submit]):not([type=button]):not([type=reset]):not([type=file]):not([type=radio]):not([type=checkbox]) {
 	padding: .8em 1.0em;
 	width: 100%;
-	font-size: 1em;
 	color: #333;
 	border: 1px solid #ddd;
 	border-radius: 2px;
@@ -922,6 +934,11 @@ fieldset {
 	margin-bottom: 1.5em;
 	border: 1px solid #ddd;
 	border-radius: 2px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+	margin-right: 0.3em;
 }
 
 /*//Select boxes
