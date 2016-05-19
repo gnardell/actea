@@ -7,7 +7,7 @@ layout: default
   {% for post in site.posts %}
   <li class="post-item">
     <article class="post-single">
-      <h2 class="post-title"><a class="post-link" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h2>
+      <h2 class="post-title"><a class="post-link" href="{{site.url}}{{ post.url}}">{{ post.title }}</a></h2>
 
       <div class="post-meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
@@ -20,7 +20,7 @@ layout: default
 
       <p class="post-excerpt"> {{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
 
-      <a href="{{ post.url }}" class="post-read-more">Continua a leggere >></a>
+      <a href="{{site.url}}{{ post.url }}" class="post-read-more">Continua a leggere >></a>
 
     </article>
   </li>
