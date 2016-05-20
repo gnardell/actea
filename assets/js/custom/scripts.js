@@ -177,3 +177,13 @@ jQuery(document).ready(function ($) {
     $('#input-file-name').text('');
   });
 });
+
+  //============================================================
+  //    Search inizialized
+  //============================================================
+
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json',
+})
