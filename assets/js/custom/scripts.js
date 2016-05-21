@@ -185,5 +185,7 @@ jQuery(document).ready(function ($) {
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
   json: '/search.json',
 })
+

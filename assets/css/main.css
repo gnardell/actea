@@ -13,25 +13,25 @@
  * 7.0 - Accessibility
  * 8.0 - Alignments
  * 9.0 - Clearings
- * 10.0 - Widgets
- * 11.0 - Content
- *    11.1 - Header
- *    11.2 - Posts and pages
- *    11.3 - Post Formats
- *    11.4 - Comments
- *    11.5 - Sidebar
- *    11.6 - Footer
- * 12.0 - Media
- *    12.1 - Captions
- *    12.2 - Galleries
- * 13.0 - Multisite
- * 14.0 - Media Queries
- *    14.1 - >= 710px
- *    14.2 - >= 783px
- *    14.3 - >= 910px
- *    14.4 - >= 985px
- *    14.5 - >= 1200px
- * 15.0 - Print
+ * 10.0 - Content
+ *    10.1 - Header
+ *    10.2 - Posts and pages
+ *    10.3 - Post Formats
+ *    10.4 - Comments
+ *    10.5 - Sidebar
+ *    10.6 - Footer
+ *    10.7 - Search
+ * 11.0 - Media
+ *    11.1 - Captions
+ *    11.2 - Galleries
+ * 12.0 - Multisite
+ * 13.0 - Media Queries
+ *    13.1 - >= 710px
+ *    13.2 - >= 783px
+ *    13.3 - >= 910px
+ *    13.4 - >= 985px
+ *    13.5 - >= 1200px
+ * 14.0 - Print
  */
 
 /* ----------------------------------------------------------------------------
@@ -1058,6 +1058,94 @@ a:hover {
 *  6.2 Menus
 */
 
+.main-navigation {
+	width: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.main-navigation.is-z-index {
+	z-index: 1;
+}
+
+.main-navigation .menu-button {
+	font-size: 1.5em;
+	position: absolute;
+	min-width: unset;
+	border: none;
+	border-radius: 0;
+	padding: 0.6em;
+	margin: 0;
+	right: 1em;
+	z-index: 100;
+}
+
+.main-navigation .menu-button:hover,
+.main-navigation .menu-button:focus {
+	background-color: transparent;
+	color: #232221;
+}
+
+.main-navigation .menu-button:active {
+	border-color: inherit;
+}
+
+.main-navigation .menu-button svg {
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+.main-navigation .menu-button.is-toggled svg {
+	-webkit-transform: rotate(0.25turn);
+	-ms-transform: rotate(0.25turn);
+	transform: rotate(0.25turn);
+}
+
+.main-navigation .menu-button.is-toggled svg path {
+	fill: #fff;
+}
+
+ul.main-nav {
+	list-style: none;
+	padding: 80px 0 0 0;
+	margin: 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	background-color: rgba(9, 115, 128, 0.9);
+	-webkit-transition: left 0.3s ease-out;
+	transition: left 0.3s ease-out;
+}
+
+ul.main-nav.is-toggled-on {
+	left: 0;
+}
+
+ul.main-nav li {
+	padding: 0.4em;
+	text-align: center;
+	visibility: hidden;
+}
+
+ul.main-nav li.is-visible {
+	visibility: visible;
+}
+
+ul.main-nav li a {
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 1.4em;
+	font-weight: 700;
+	border-bottom: 0;
+}
+
 /* -------------------------------------------------------
 *  7.0 Accessibility
 *  -------------------------------------------------------*/
@@ -1680,11 +1768,11 @@ img {
 }
 
 /* -------------------------------------------------------
-*  11.0 Content
+*  10.0 Content
 *  ------------------------------------------------------*/
 
 /*
-* 11.1 Header
+* 10.1 Header
 */
 
 .site-branding {
@@ -1703,96 +1791,8 @@ img {
 	border-bottom: none;
 }
 
-.main-navigation {
-	width: 100%;
-	top: 0;
-	left: 0;
-	bottom: 0;
-}
-
-.main-navigation.is-z-index {
-	z-index: 1;
-}
-
-.main-navigation .menu-button {
-	font-size: 1.5em;
-	position: absolute;
-	min-width: unset;
-	border: none;
-	border-radius: 0;
-	padding: 0.6em;
-	margin: 0;
-	right: 1em;
-	z-index: 100;
-}
-
-.main-navigation .menu-button:hover,
-.main-navigation .menu-button:focus {
-	background-color: transparent;
-	color: #232221;
-}
-
-.main-navigation .menu-button:active {
-	border-color: inherit;
-}
-
-.main-navigation .menu-button svg {
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	vertical-align: middle;
-}
-
-.main-navigation .menu-button.is-toggled svg {
-	-webkit-transform: rotate(0.25turn);
-	-ms-transform: rotate(0.25turn);
-	transform: rotate(0.25turn);
-}
-
-.main-navigation .menu-button.is-toggled svg path {
-	fill: #fff;
-}
-
-ul.main-nav {
-	list-style: none;
-	padding: 80px 0 0 0;
-	margin: 0;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	bottom: 0;
-	left: 100%;
-	background-color: rgba(9, 115, 128, 0.9);
-	-webkit-transition: left 0.3s ease-out;
-	transition: left 0.3s ease-out;
-}
-
-ul.main-nav.is-toggled-on {
-	left: 0;
-}
-
-ul.main-nav li {
-	padding: 0.4em;
-	text-align: center;
-	visibility: hidden;
-}
-
-ul.main-nav li.is-visible {
-	visibility: visible;
-}
-
-ul.main-nav li a {
-	font-family: "PT Sans", Helvetica, Arial, sans-serif;
-	color: #FFFFFF;
-	font-size: 1.4em;
-	font-weight: 700;
-	border-bottom: 0;
-}
-
 /*
-* 11.2 Post ang Pages
+* 10.2 Post ang Pages
 */
 
 .post-list {
@@ -1854,7 +1854,7 @@ a.post-read-more:hover {
 }
 
 /*
-* 11.4 Comments
+* 10.4 Comments
 */
 
 .bypostauthor {
@@ -1862,7 +1862,7 @@ a.post-read-more:hover {
 }
 
 /*
-* 11.6 Footer
+* 10.6 Footer
 */
 
 .site-footer {
@@ -1924,6 +1924,25 @@ a.post-read-more:hover {
 .footer-copy p {
 	font-size: 0.8em;
 	margin: 0.2em;
+}
+
+/*
+* 11.7 Search
+*/
+
+#search-input {
+	margin-top: 1.5em;
+}
+
+#results-container {
+	margin-bottom: 0;
+	list-style: none;
+	padding: 1em;
+	border: 1px solid #ddd;
+}
+
+#results-container li a {
+	border-bottom: 0;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -2007,18 +2026,6 @@ table tbody td[data-title]:before {
 	content: none;
 }
 
-img.half {
-	width: 50%;
-}
-
-img.third {
-	width: 33.33333333%;
-}
-
-.site-branding .site-title {
-	text-align: center;
-}
-
 .main-navigation .menu-button {
 	visibility: hidden;
 }
@@ -2053,6 +2060,18 @@ ul.main-nav li a:hover,
 ul.main-nav li a:focus {
 	outline-color: #097380;
 	outline-offset: -2px;
+}
+
+img.half {
+	width: 50%;
+}
+
+img.third {
+	width: 33.33333333%;
+}
+
+.site-branding .site-title {
+	text-align: center;
 }
 
 }
