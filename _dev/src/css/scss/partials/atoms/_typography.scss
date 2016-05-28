@@ -3,8 +3,6 @@
 *  ------------------------------------------------------*/
 
 
-/*Headings*/
-
 h1,
 h2,
 h3,
@@ -98,4 +96,17 @@ mark {
 
 abbr[title] {
   border-bottom: none;
+}
+
+::-webkit-input-placeholder {
+   color: $base-theme-color;
+}
+
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $base-theme-color;
+}
+
+:-ms-input-placeholder {
+   color: $base-theme-color;
 }

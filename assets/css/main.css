@@ -525,8 +525,6 @@ body {
 *  3.0 Typography
 *  ------------------------------------------------------*/
 
-/*Headings*/
-
 h1,
 h2,
 h3,
@@ -623,6 +621,18 @@ mark {
 
 abbr[title] {
 	border-bottom: none;
+}
+
+::-webkit-input-placeholder {
+	color: #097380;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+	color: #097380;
+}
+
+:-ms-input-placeholder {
+	color: #097380;
 }
 
 /* -------------------------------------------------------
@@ -1930,8 +1940,23 @@ a.post-read-more:hover {
 * 11.7 Search
 */
 
+.search-icon {
+	position: relative;
+}
+
+.search-icon svg.icon-search {
+	position: absolute;
+	bottom: 1.1em;
+	right: 1em;
+	width: 1.4em;
+	height: 1.4em;
+	color: #097380;
+}
+
 #search-input {
 	margin-top: 1.5em;
+	background-color: #f5f5f5;
+	font-size: 1.2em;
 }
 
 #results-container {

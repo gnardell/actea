@@ -192,5 +192,6 @@ SimpleJekyllSearch({
 $('#search-input').on('keyup', function(){
   if ($('#results-container').has('li').length >= 0) {
     $('#results-container').css("display", "block");
+    $('#results-container').removeAttr('hidden');
   }
 })

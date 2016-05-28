@@ -154,9 +154,21 @@ a {
 /*
 * 11.7 Search
 */
-
+.search-icon{
+  position: relative;
+  svg.icon-search{
+    position: absolute;
+    bottom: 1.1em;
+    right: 1em;
+    width: 1.4em;
+    height: 1.4em;
+    color: $base-theme-color;
+  }
+}
 #search-input {
   margin-top: 1.5em;
+  background-color: #f5f5f5;
+  font-size: 1.2em;
 }
 
 #results-container {
