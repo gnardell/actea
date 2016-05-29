@@ -11,6 +11,8 @@ $medium-size: em(960);
 $large-size: em(1280);
 $xlarge-size: em(1920);
 
+$max-width: em(840,21) !global;
+
 // Bourbon Neat Breakpoints
 //$xsmall: new-breakpoint(max-width $small-size 4);
 $small: new-breakpoint(min-width $small-size 8);
