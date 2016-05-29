@@ -178,20 +178,23 @@ jQuery(document).ready(function ($) {
   });
 });
 
-  //============================================================
-  //    Search inizialized
-  //============================================================
+//============================================================
+//    Search inizialized
+//============================================================
 
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+  noResultsText: 'Nessun risultato trovato.',
   json: '/search.json'
 })
 
-$('#search-input').on('keyup', function(){
-  if ($('#results-container').has('li').length >= 0) {
-    $('#results-container').css("display", "block");
-    $('#results-container').removeAttr('hidden');
+$('#search-input').on('keyup', function () {
+  if ($('#search-input').val()) {
+    if ($('#results-container').has('li').length >= 0) {
+      $('#results-container').css("display", "block");
+      $('#results-container').removeAttr('hidden');
+    }
   }
 })
