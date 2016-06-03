@@ -10,12 +10,12 @@
   {% include open-graph.html %}
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{siter.url}}/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{site.url}}/feed.xml">
 
   <!-- Styles -->
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|Lora:400,400italic,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="{{siter.url}}/assets/css/icomoon.css">
-  <link rel="stylesheet" href="{{siter.url}}/assets/css/main.css">
+  <link rel="stylesheet" href="{{site.url}}/assets/css/icomoon.css">
+  <link rel="stylesheet" href="{{site.url}}/assets/css/main.css">
 
 
   {% if site.owner.ga %}
