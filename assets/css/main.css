@@ -659,6 +659,7 @@ dd {
 /*------ TABLES ------*/
 
 table {
+	table-layout: fixed;
 	width: 100%;
 	margin-bottom: 1.5em;
 }
@@ -1467,38 +1468,25 @@ ul.main-nav li a {
 .aligncenter,
 div.aligncenter {
 	display: block;
-	margin: 5px auto 5px auto;
-}
-
-.alignright {
-	float: right;
-	margin: 5px 0 20px 20px;
+	margin: 1.8em auto;
+	clear: both;
 }
 
 .alignleft {
 	float: left;
-	margin: 5px 20px 20px 0;
+	margin: .5em 1em 1em 0;
 }
 
-a img.alignright {
+.alignright {
 	float: right;
-	margin: 5px 0 20px 20px;
+	margin: .5em 0 1em 1em;
 }
 
-a img.alignnone {
-	margin: 5px 20px 20px 0;
+/*
+.alignleft:first-child, .alignright:first-child {
+  margin-top: 1.2em;
 }
-
-a img.alignleft {
-	float: left;
-	margin: 5px 20px 20px 0;
-}
-
-a img.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
+*/
 
 /* -------------------------------------------------------
 *  9.0 Clearing
@@ -1552,6 +1540,18 @@ main {
 }
 */
 
+/*Figures*/
+
+figure {
+	margin: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+figcaption {
+	font-size: 0.7em;
+}
+
 /*Images*/
 
 img {
@@ -1577,27 +1577,6 @@ img {
 	border-top: 1px dashed #999;
 	border-bottom: 1px dashed #999;
 	text-align: center;
-}
-
-.aligncenter {
-	display: block;
-	margin: 1.8em auto;
-	clear: both;
-}
-
-.alignleft {
-	float: left;
-	margin: .3em 2em 2em 0;
-}
-
-.alignright {
-	float: right;
-	margin: .3em 0 2em 2em;
-}
-
-.alignleft:first-child,
-.alignright:first-child {
-	margin-top: 1.2em;
 }
 
 /*===========================================
@@ -2000,7 +1979,7 @@ html {
 }
 
 table {
-	font-size: .9em;
+	font-size: .7em;
 }
 
 table thead {
@@ -2090,11 +2069,11 @@ ul.main-nav li a:focus {
 }
 
 img.half {
-	width: 50%;
+	width: 47%;
 }
 
 img.third {
-	width: 33.33333333%;
+	width: 30.5%;
 }
 
 .site-branding .site-title {
@@ -2106,7 +2085,7 @@ img.third {
 @media screen and (min-width: 80em) {
 
 table {
-	font-size: 1em;
+	font-size: 0.7em;
 }
 
 table th,

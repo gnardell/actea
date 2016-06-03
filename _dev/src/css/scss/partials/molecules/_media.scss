@@ -1,3 +1,14 @@
+/*Figures*/
+figure {
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+figcaption {
+  font-size: 0.7em;
+}
+
 /*Images*/
 img {
   display: inline-block;
@@ -7,10 +18,10 @@ img {
   -ms-interpolation-mode: bicubic;
   @include media($medium){
   &.half {
-    width: 50%;
+    width: 47%;
   }
   &.third {
-    width: 33.33333333%;
+    width: 30.5%;
     }
   }
 }

@@ -1,14 +1,15 @@
 /*------ TABLES ------*/
 table {
+  table-layout: fixed;
   width: 100%;
   margin-bottom: 1.5em;
 
   @include media ($medium) {
-    font-size: .9em;
+    font-size: .7em;
   }
 
   @include media($large) {
-    font-size: 1em;
+    font-size: 0.7em;
   }
 
   thead {
