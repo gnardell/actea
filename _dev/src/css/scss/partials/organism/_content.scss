@@ -25,6 +25,12 @@
 * 10.2 Post ang Pages
 */
 
+img {
+  &.featured {
+    padding: 2em 0;
+  }
+}
+
 .post-list {
   list-style: none;
   padding: 0;

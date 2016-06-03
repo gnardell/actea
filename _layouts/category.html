@@ -1,28 +1,37 @@
 ---
 layout: default
 ---
-<h2>Articoli nella categoria {{ page.title | upcase }}</h2>
 
-{% unless page.content == '' %}
-  <p>{{ page.content }}</p>
-{% endunless %}
+<main role="main" id="main">
+  <div class="row-wrapper">
+    <div class="outer-container">
+      <h2>Articoli nella categoria {{ page.title | upcase }}</h2>
 
-{% unless site.categories.[page.category] | size > 0 %}
-  <p>No posts in this category at this time.</p>
-{% endunless %}
+      {% unless page.content == '' %}
+        <p>{{ page.content }}</p>
+      {% endunless %}
 
-{% for post in site.categories.[page.category] %}
-<div class="post-preview">
-   <h2 class="post-title">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-            {{ post.title }}
-        </a>
-    </h2>
+      {% unless site.categories.[page.category] | size > 0 %}
+        <p>No posts in this category at this time.</p>
+      {% endunless %}
 
-    <p class="post-excerpt"> {{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+      {% for post in site.categories.[page.category] %}
+      <div class="post-preview">
+         <h2 class="post-title">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+                  {{ post.title }}
+              </a>
+          </h2>
 
-    <p class="post-meta">
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
-    </p>
-</div>
-{% endfor %}
+          <p class="post-excerpt"> {{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+
+          <p class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+          </p>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</main>
+

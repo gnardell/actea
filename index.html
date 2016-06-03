@@ -2,27 +2,32 @@
 layout: default
 ---
 
+<main role="main" id="main">
+  <div class="row-wrapper">
+    <div class="outer-container">
+      <ul class="post-list">
+        {% for post in site.posts %}
+        <li class="post-item">
+          <article class="post-single">
+            <h2 class="post-title"><a class="post-link" href="{{site.url}}{{ post.url}}">{{ post.title }}</a></h2>
 
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li class="post-item">
-    <article class="post-single">
-      <h2 class="post-title"><a class="post-link" href="{{site.url}}{{ post.url}}">{{ post.title }}</a></h2>
+            <div class="post-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+              <ul class="post-categories">
+                {% for category in post.categories %}
+                <li><a href="{{site.url}}/{{category}}/">{{category}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
 
-      <div class="post-meta">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
-        <ul class="post-categories">
-          {% for category in post.categories %}
-          <li><a href="{{site.url}}/{{category}}/">{{category}}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
+            <p class="post-excerpt"> {{ post.excerpt | remove: '<p>' | remove: '</p>' }} </p>
 
-      <p class="post-excerpt"> {{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+            <a href="{{site.url}}{{ post.url }}" class="post-read-more">Continua a leggere >></a>
 
-      <a href="{{site.url}}{{ post.url }}" class="post-read-more">Continua a leggere >></a>
-
-    </article>
-  </li>
-  {% endfor %}
-</ul>
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</main>
