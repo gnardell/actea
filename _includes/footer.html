@@ -4,34 +4,34 @@
 
 {% if site.owner.avatar%}
     <div class="footer-avatar">
-      <img src="{{ "/assets/img/bio-avatar.png" }}" alt="Avatar di Giuseppe Nardella">
+      <img src="{{siter.url}}/assets/img/bio-avatar.png" alt="Avatar di Giuseppe Nardella">
     </div>
     {% endif %}
 
       <ul class="social-media-list">
         {% if site.owner.github %}
         <li>
-          <a href="https://github.com/{{ site.github_username }}">
+          <a href="https://github.com/{{ site.owner.github}}">
             <svg class="icon icon-github ">
-              <use xlink:href="{{ "/assets/img/svg-icons/symbol-defs.svg#icon-github" | prepend: site.baseurl }}"></use>
+              <use xlink:href="{{siter.url}}/assets/img/svg-icons/symbol-defs.svg#icon-github"></use>
             </svg>
             <span class="screen-reader-text">Github</span>
           </a>
         </li>
         {% endif %} {% if site.owner.twitter %}
         <li>
-          <a href="https://twitter.com/{{ site.twitter_username }}">
+          <a href="https://twitter.com/{{ site.owner.twitter }}">
             <svg class="icon icon-twitter ">
-              <use xlink:href="{{ "/assets/img/svg-icons/symbol-defs.svg#icon-twitter" | prepend: site.baseurl }}"></use>
+              <use xlink:href="{{siter.url}}/assets/img/svg-icons/symbol-defs.svg#icon-twitter"></use>
             </svg>
             <span class="screen-reader-text">Seguimi su Twitter</span>
           </a>
         </li>
         {% endif %}
         <li>
-          <a href="{{ " /feed.xml " | prepend: site.baseurl }}">
+          <a href="{{siter.url}}/feed.xml">
             <svg class="icon icon-rss ">
-              <use xlink:href="{{ "/assets/img/svg-icons/symbol-defs.svg#icon-rss" | prepend: site.baseurl }}"></use>
+              <use xlink:href="{{siter.url}}/assets/img/svg-icons/symbol-defs.svg#icon-rss"></use>
             </svg>
             <span class="screen-reader-text">Sottoscrivi RSS</span></a>
         </li>
@@ -46,8 +46,9 @@
   </div>
 </footer>
 
-<script type="text/javascript " src="{{ "/assets/js/vendors/modernizr-custom.js " | prepend: site.baseurl }} "></script>
-<script type="text/javascript " src="{{ "/assets/js/vendors/jquery-2.2.3.min.js " | prepend: site.baseurl }} "></script>
-<script type="text/javascript " src="{{ "/assets/js/vendors/svgxuse.js " | prepend: site.baseurl }} "></script>
-<script type="text/javascript " src="{{ "/assets/js/vendors/jekyll-search.min.js " | prepend: site.baseurl }} "></script>
-<script type="text/javascript " src="{{ "/assets/js/custom/scripts.js " | prepend: site.baseurl }} "></script>
+<script type="text/javascript " src="{{siter.url}}/assets/js/vendors/modernizr-custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{siter.url}}/assets/js/vendors/jquery-2.2.3.min.js""><\/script>')</script>
+<script type="text/javascript " src="{{siter.url}}/assets/js/vendors/svgxuse.js"></script>
+<script type="text/javascript " src="{{siter.url}}/assets/js/vendors/jekyll-search.min.js"></script>
+<script type="text/javascript " src="{{siter.url}}/assets/js/custom/scripts.js"></script>
