@@ -187,7 +187,7 @@ SimpleJekyllSearch({
   resultsContainer: document.getElementById('results-container'),
   searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
   noResultsText: 'Nessun risultato trovato.',
-  json: '/search.json'
+  json: '{{ site.baseurl }}/search.json'
 })
 
 $('#search-input').on('keyup', function () {
