@@ -113,7 +113,8 @@ a {
       color: #ffffff;
     }
     &:active,
-    &:focus {
+    &:focus,
+    &:hover{
       outline-color: #ffffff;
     }
   }

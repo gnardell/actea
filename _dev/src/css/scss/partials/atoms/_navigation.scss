@@ -15,6 +15,7 @@ a {
     border-bottom: 1px solid currentColor;
   }
   &:active,
+  &:hover,
   &:focus {
     @include link-focus;
     border-bottom-color: currentColor;
@@ -42,12 +43,16 @@ a {
     min-width: unset;
     border: none;
     border-radius: 0;
-    padding: 0.6em;
+    padding: 0.4em;
     margin: 0;
     right: 1em;
+    top:0.2em;
     z-index: 100;
+    @include transition (outline-offset 0.2s ease);
     &:hover,
-    &:focus {
+    &:focus,
+    &:active{
+      @include link-focus;
       background-color: transparent;
       color: $text-color;
     }

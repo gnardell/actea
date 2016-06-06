@@ -766,12 +766,15 @@ button,
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
 	-moz-osx-font-smoothing: grayscale;
-	-webkit-transition: background 0.3s, color 0.3s linear;
-	transition: background 0.3s, color 0.3s linear;
+	-webkit-transition: all 0.3s ease, color 0.3s linear;
+	transition: all 0.3s ease, color 0.3s linear;
+	outline: none;
 }
 
 button:hover,
-.button:hover {
+button:focus,
+.button:hover,
+.button:focus {
 	color: #fefefe;
 	background-color: #232221;
 }
@@ -782,15 +785,25 @@ button:active,
 }
 
 button.btn-secondary:hover,
+button.btn-secondary:focus,
 button.btn-warning:hover,
+button.btn-warning:focus,
 button.btn-alert:hover,
+button.btn-alert:focus,
 button.btn-primary:hover,
+button.btn-primary:focus,
 button.btn-success:hover,
+button.btn-success:focus,
 .button.btn-secondary:hover,
+.button.btn-secondary:focus,
 .button.btn-warning:hover,
+.button.btn-warning:focus,
 .button.btn-alert:hover,
+.button.btn-alert:focus,
 .button.btn-primary:hover,
-.button.btn-success:hover {
+.button.btn-primary:focus,
+.button.btn-success:hover,
+.button.btn-success:focus {
 	color: #fefefe;
 }
 
@@ -814,7 +827,9 @@ button.btn-secondary,
 }
 
 button.btn-secondary:hover,
-.button.btn-secondary:hover {
+button.btn-secondary:focus,
+.button.btn-secondary:hover,
+.button.btn-secondary:focus {
 	background-color: #707070;
 }
 
@@ -825,7 +840,9 @@ button.btn-warning,
 }
 
 button.btn-warning:hover,
-.button.btn-warning:hover {
+button.btn-warning:focus,
+.button.btn-warning:hover,
+.button.btn-warning:focus {
 	background-color: #9E6C00;
 }
 
@@ -836,7 +853,9 @@ button.btn-success,
 }
 
 button.btn-success:hover,
-.button.btn-success:hover {
+button.btn-success:focus,
+.button.btn-success:hover,
+.button.btn-success:focus {
 	background-color: #008353;
 }
 
@@ -847,7 +866,9 @@ button.btn-alert,
 }
 
 button.btn-alert:hover,
-.button.btn-alert:hover {
+button.btn-alert:focus,
+.button.btn-alert:hover,
+.button.btn-alert:focus {
 	background-color: #d52300;
 }
 
@@ -858,7 +879,9 @@ button.btn-primary,
 }
 
 button.btn-primary:hover,
-.button.btn-primary:hover {
+button.btn-primary:focus,
+.button.btn-primary:hover,
+.button.btn-primary:focus {
 	background-color: #007ba5;
 	color: #fefefe;
 }
@@ -891,11 +914,12 @@ a.button:hover,
 a.button:focus {
 	background-image: none;
 	text-shadow: none;
+	outline: none;
 }
 
 a.button:link,
 a.button:visited {
-	border-bottom: 2px solid currentColor;
+	border-bottom: 2px solid #232221;
 }
 
 /* Elements */
@@ -913,6 +937,8 @@ label {
 
 select,
 textarea {
+	-webkit-transition: outline-offset 0.2s ease;
+	transition: outline-offset 0.2s ease;
 	padding: .8em 1.0em;
 	width: 100%;
 	color: #333;
@@ -925,8 +951,34 @@ textarea {
 	box-sizing: border-box;
 }
 
+select:hover,
+select:focus,
+select:active,
+textarea:hover,
+textarea:focus,
+textarea:active {
+	outline-color: #097380;
+	outline-style: solid;
+	outline-width: 2px;
+	outline-offset: 2px;
+}
+
 textarea {
 	min-height: 9em;
+}
+
+input:not([type=submit]):not([type=button]):not([type=reset]) {
+	-webkit-transition: outline-offset 0.2s ease;
+	transition: outline-offset 0.2s ease;
+}
+
+input:not([type=submit]):not([type=button]):not([type=reset]):hover,
+input:not([type=submit]):not([type=button]):not([type=reset]):focus,
+input:not([type=submit]):not([type=button]):not([type=reset]):active {
+	outline-color: #097380;
+	outline-style: solid;
+	outline-width: 2px;
+	outline-offset: 2px;
 }
 
 input:not([type=submit]):not([type=button]):not([type=reset]):not([type=file]):not([type=radio]):not([type=checkbox]) {
@@ -1056,9 +1108,12 @@ a:visited {
 }
 
 a:active,
+a:hover,
 a:focus {
 	outline-color: #097380;
-	outline-offset: -2px;
+	outline-style: solid;
+	outline-width: 2px;
+	outline-offset: 2px;
 	border-bottom-color: currentColor;
 }
 
@@ -1087,14 +1142,22 @@ a:hover {
 	min-width: unset;
 	border: none;
 	border-radius: 0;
-	padding: 0.6em;
+	padding: 0.4em;
 	margin: 0;
 	right: 1em;
+	top: 0.2em;
 	z-index: 100;
+	-webkit-transition: outline-offset 0.2s ease;
+	transition: outline-offset 0.2s ease;
 }
 
 .main-navigation .menu-button:hover,
-.main-navigation .menu-button:focus {
+.main-navigation .menu-button:focus,
+.main-navigation .menu-button:active {
+	outline-color: #097380;
+	outline-style: solid;
+	outline-width: 2px;
+	outline-offset: 2px;
 	background-color: transparent;
 	color: #232221;
 }
@@ -1186,8 +1249,6 @@ ul.main-nav li a {
 	font-weight: bold;
 	color: #097380;
 	background-color: #fefefe;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	background-image: none;
 }
 
@@ -1844,7 +1905,9 @@ a.post-read-more {
 a.post-read-more:focus,
 a.post-read-more:hover {
 	outline-color: #097380;
-	outline-offset: -2px;
+	outline-style: solid;
+	outline-width: 2px;
+	outline-offset: 2px;
 }
 
 /*
@@ -1874,7 +1937,8 @@ a.post-read-more:hover {
 }
 
 .site-footer a:active,
-.site-footer a:focus {
+.site-footer a:focus,
+.site-footer a:hover {
 	outline-color: #ffffff;
 }
 
@@ -2069,7 +2133,9 @@ ul.main-nav li a.active {
 ul.main-nav li a:hover,
 ul.main-nav li a:focus {
 	outline-color: #097380;
-	outline-offset: -2px;
+	outline-style: solid;
+	outline-width: 2px;
+	outline-offset: 2px;
 }
 
 img.half {

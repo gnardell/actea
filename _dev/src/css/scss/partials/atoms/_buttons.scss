@@ -2,8 +2,11 @@
 *  5.0 Forms
 *  ------------------------------------------------------*/
 
+
 /*  Buttons  */
-button, .button {
+
+button,
+.button {
   font-family: $font-family-headings;
   font-weight: 400;
   line-height: 1.6;
@@ -20,57 +23,66 @@ button, .button {
   z-index: 1;
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  transition: background 0.3s, color 0.3s linear;
-
-  &:hover {
+  transition: all 0.3s ease, color 0.3s linear;
+  outline: none;
+  &:hover,
+  &:focus{
     color: $body-bg;
     background-color: $text-color;
   }
   &:active {
-    border-color:$body-bg;
+    border-color: $body-bg;
   }
-
-  &.btn-secondary, &.btn-warning, &.btn-alert, &.btn-primary, &.btn-success {
-    &:hover {
+  &.btn-secondary,
+  &.btn-warning,
+  &.btn-alert,
+  &.btn-primary,
+  &.btn-success {
+    &:hover,
+    &:focus {
       color: $body-bg;
     }
     &:active {
-      border-color:$body-bg;
+      border-color: $body-bg;
     }
   }
-
   &.btn-secondary {
     border-color: $btn-secondary-color;
     color: $btn-secondary-color;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $btn-secondary-color;
     }
   }
   &.btn-warning {
     border-color: $warning-color;
     color: $warning-color;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $warning-color;
     }
   }
   &.btn-success {
     border-color: $success-color;
     color: $success-color;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $success-color;
     }
   }
   &.btn-alert {
     border-color: $alert-color;
     color: $alert-color;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $alert-color;
     }
   }
   &.btn-primary {
     border-color: $info-color;
     color: $info-color;
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $info-color;
       color: $body-bg;
     }
@@ -90,16 +102,17 @@ button, .button {
 }
 
 a.button {
-  text-shadow:none;
-  background-image:none;
+  text-shadow: none;
+  background-image: none;
   text-align: center;
   &:hover,
-  &:focus{
-    background-image:none;
+  &:focus {
+    background-image: none;
     text-shadow: none;
+    outline: none;
   }
   &:link,
   &:visited {
-    border-bottom: 2px solid currentColor;
+    border-bottom: 2px solid $text-color;
   }
 }

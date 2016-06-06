@@ -1,6 +1,8 @@
 @mixin link-focus {
   outline-color: $base-theme-color;
-  outline-offset: -2px;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
 }
 
 @mixin image-2x($image, $width, $height) {

@@ -1,40 +1,27 @@
-/* Elements */
+  /* Elements */
 
-form {
-  ul{
-    list-style: none;
-    padding-left: 1em;
+  form {
+    ul {
+      list-style: none;
+      padding-left: 1em;
+    }
   }
-}
 
-label {
-  //display: block;
-  font-size: 1.3em;
-  margin-bottom: .2em;
-  text-transform: uppercase;
-}
+  label {
+    //display: block;
+    font-size: 1.3em;
+    margin-bottom: .2em;
+    text-transform: uppercase;
+  }
 
-select, textarea {
-  padding: .8em 1.0em;
-  width: 100%;
-  color: #333;
-  border: 1px solid $border-color;
-  border-radius: 2px;
-  background: $body-bg;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box
-}
-
-textarea {
-  min-height: 9em;
-}
-
-input {
-  &:not([type=submit]):not([type=button]):not([type=reset]):not([type=file]):not([type=radio]):not([type=checkbox]) {
+  select,
+  textarea {
+    @include transition (outline-offset 0.2s ease);
+    &:hover,
+    &:focus,
+    &:active {
+      @include link-focus;
+    }
     padding: .8em 1.0em;
     width: 100%;
     color: #333;
@@ -48,18 +35,47 @@ input {
     -ms-box-sizing: border-box;
     box-sizing: border-box
   }
-}
 
-fieldset {
-  margin-bottom: 1.5em;
-  border: 1px solid $border-color;
-  border-radius: 2px;
-}
-input[type=checkbox], input[type=radio]{
-  margin-right: 0.3em;
-}
+  textarea {
+    min-height: 9em;
+  }
 
-/*//Select boxes
+  input {
+    &:not([type=submit]):not([type=button]):not([type=reset]) {
+      @include transition (outline-offset 0.2s ease);
+      &:hover,
+      &:focus,
+      &:active {
+        @include link-focus;
+      }
+    }
+    &:not([type=submit]):not([type=button]):not([type=reset]):not([type=file]):not([type=radio]):not([type=checkbox]) {
+      padding: .8em 1.0em;
+      width: 100%;
+      color: #333;
+      border: 1px solid $border-color;
+      border-radius: 2px;
+      background: $body-bg;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box
+    }
+  }
+
+  fieldset {
+    margin-bottom: 1.5em;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+    margin-right: 0.3em;
+  }
+  /*//Select boxes
 .select-box-inner {
   position: relative;
   overflow: hidden;
