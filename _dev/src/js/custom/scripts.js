@@ -182,13 +182,6 @@ jQuery(document).ready(function ($) {
 //    Search inizialized
 //============================================================
 
-SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-  noResultsText: 'Nessun risultato trovato.',
-  json: '{{ site.baseurl }}/search.json'
-})
 
 $('#search-input').on('keyup', function () {
   if ($('#search-input').val()) {
