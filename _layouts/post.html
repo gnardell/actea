@@ -6,7 +6,7 @@ layout: default
 
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
      {% if page.image %}
-        <img class="featured" src="{{page.image.src}}" alt="{{page.image.alt}}">
+        <img class="featured" src="{{site.url}}{{page.image.src}}" alt="{{page.image.alt}}">
       {% endif %}
 
       <div class="row-wrapper">
