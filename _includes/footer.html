@@ -52,3 +52,13 @@
 <script type="text/javascript " src="{{site.url}}/assets/js/vendors/svgxuse.js"></script>
 <script type="text/javascript " src="{{site.url}}/assets/js/vendors/jekyll-search.min.js"></script>
 <script type="text/javascript " src="{{site.url}}/assets/js/custom/scripts.js"></script>
+<script>
+
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+  noResultsText: 'Nessun risultato trovato.',
+  json: '{{ site.url }}/search.json'
+})
+</script>
