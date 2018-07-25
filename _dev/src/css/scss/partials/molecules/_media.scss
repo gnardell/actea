@@ -17,6 +17,9 @@ img {
   height: auto;
   -ms-interpolation-mode: bicubic;
   @include media($medium){
+  &.full {
+    width: 100%;
+  }
   &.half {
     width: 47%;
   }

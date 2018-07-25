@@ -2145,6 +2145,10 @@ ul.main-nav li a:focus {
 	outline-offset: 2px;
 }
 
+img.full {
+	width: 100%;
+}
+
 img.half {
 	width: 47%;
 }
