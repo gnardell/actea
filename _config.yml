@@ -20,7 +20,7 @@ url: "http://localhost:4000" # development base hostname & protocol for your sit
 
 logo: #site-logo
 
-gems:
+plugins:
   - jekyll-sitemap
 
 exclude: ["_dev",

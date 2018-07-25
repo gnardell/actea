@@ -250,6 +250,7 @@ figure {
  */
 
 hr {
+	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 	height: 0;
 }
@@ -373,6 +374,7 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box; /* 1 */
 	padding: 0; /* 2 */
 }
@@ -395,6 +397,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
 	-webkit-appearance: textfield; /* 1 */
+	-webkit-box-sizing: content-box;
 	box-sizing: content-box; /* 2 */
 }
 
@@ -490,11 +493,13 @@ th {
 /* Set box-sizing to border-box */
 
 * {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 *:before,
 *:after {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -502,7 +507,7 @@ html {
 	background: #fefefe;
 	font-size: 1em;
 	-webkit-overflow-scrolling: touch;
-	-webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
@@ -947,6 +952,7 @@ textarea {
 	background: #fefefe;
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
+	-webkit-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -990,6 +996,7 @@ input:not([type=submit]):not([type=button]):not([type=reset]):not([type=file]):n
 	background: #fefefe;
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
+	-webkit-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
